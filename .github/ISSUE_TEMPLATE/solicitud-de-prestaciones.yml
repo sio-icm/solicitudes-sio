@@ -37,12 +37,37 @@ body:
       placeholder: "Ejemplo: Necesitamos desplegar un perfilador de CTD en la Bahía de Palma para una campaña de 2 semanas."
       render: markdown
 
+  - type: input
+    id: fecha_inicio
+    attributes:
+      label: "Fecha estimada de inicio de la prestación"
+      placeholder: "Ejemplo: 15/06/2024"
+
+  - type: input
+    id: fecha_fin
+    attributes:
+      label: "Fecha estimada de finalización de la prestación"
+      description: "Si no es un rango temporal, solo especifica la fecha de finalización."
+      placeholder: "Ejemplo: 30/06/2024"
+
   - type: markdown
     attributes:
       value: |
         ---
         ## 📌 Información del Solicitante
         A continuación, proporciona tus datos personales y del proyecto asociado a la solicitud.
+
+  - type: input
+    id: nombre
+    attributes:
+      label: "Nombre y apellidos"
+      placeholder: "Ejemplo: Juan Pérez"
+
+  - type: input
+    id: email
+    attributes:
+      label: "Email"
+      placeholder: "ejemplo@correo.com"
 
   - type: dropdown
     id: pertenece_csic
@@ -53,52 +78,40 @@ body:
         - "No"
 
   - type: input
-    id: nombre
-    attributes:
-      label: "Nombre y apellidos"
-      placeholder: "Ejemplo: Juan Pérez"
-
-  - type: input
-    id: telefono
-    attributes:
-      label: "Teléfono"
-      placeholder: "Ejemplo: +34 600 123 456"
-
-  - type: input
-    id: email
-    attributes:
-      label: "Email"
-      placeholder: "ejemplo@correo.com"
-
-  - type: input
-    id: direccion
-    attributes:
-      label: "Dirección"
-      placeholder: "Calle, número, CP, Ciudad"
-
-  - type: input
     id: centro
     attributes:
-      label: "Centro"
+      label: "Centro (solo si perteneces al CSIC)"
       placeholder: "Ejemplo: ICM-CSIC"
 
   - type: input
     id: departamento
     attributes:
-      label: "Departamento/Grupo de investigación"
+      label: "Departamento/Grupo de investigación (solo si perteneces al CSIC)"
       placeholder: "Ejemplo: Oceanografía Física"
+
+  - type: input
+    id: empresa
+    attributes:
+      label: "Nombre de la empresa (solo si NO perteneces al CSIC)"
+      placeholder: "Ejemplo: OceanTech SL"
+
+  - type: input
+    id: direccion
+    attributes:
+      label: "Dirección (solo si NO perteneces al CSIC)"
+      placeholder: "Calle, número, CP, Ciudad"
+
+  - type: input
+    id: telefono
+    attributes:
+      label: "Número de teléfono (solo si NO perteneces al CSIC)"
+      placeholder: "Ejemplo: +34 600 123 456"
 
   - type: input
     id: nombre_proyecto
     attributes:
       label: "Nombre del proyecto/acrónimo"
       placeholder: "Ejemplo: PROYECTO-MAR"
-
-  - type: input
-    id: referencia_proyecto
-    attributes:
-      label: "Referencia del proyecto"
-      placeholder: "Ejemplo: 2024-ICM-001"
 
   - type: input
     id: responsable_proyecto
@@ -111,16 +124,3 @@ body:
     attributes:
       label: "Email del Responsable del proyecto"
       placeholder: "ejemplo@institucion.com"
-
-  - type: input
-    id: fecha_solicitud
-    attributes:
-      label: "Fecha estimada del servicio"
-      placeholder: "Ejemplo: 15/06/2024"
-
-  - type: checkboxes
-    id: confirmacion
-    attributes:
-      label: "Confirmación"
-      options:
-        - label: "Confirmo que he revisado la documentación disponible antes de enviar esta solicitud."
