@@ -55,7 +55,7 @@ body:
       value: |
         ---
         ## 📌 Información del Solicitante
-        A continuación, proporciona tus datos personales y del proyecto asociado a la solicitud.
+        A continuación, proporciona tus datos personales.
 
   - type: input
     id: nombre
@@ -106,6 +106,13 @@ body:
     attributes:
       label: "Número de teléfono (solo si NO perteneces al CSIC)"
       placeholder: "Ejemplo: +34 600 123 456"
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 📌 Información del Proyecto
+        Datos sobre el proyecto asociado a la solicitud.
 
   - type: input
     id: nombre_proyecto
