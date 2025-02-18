@@ -1,17 +1,8 @@
----
-name: Solicitud de Prestaciones
-about: Solicita un servicio o soporte técnico del SIO-ICM.
-title: Solicitud de Prestaciones
-labels: ''
-assignees: ''
-
----
-
-name: Solicitud de Prestaciones
-description: Solicita un servicio o soporte técnico del SIO-ICM.
+name: "Solicitud de Prestaciones"
+description: "Solicita un servicio o soporte técnico del SIO-ICM."
 title: "[Solicitud] Breve descripción del servicio requerido"
 labels: ["solicitud", "pendiente revisión"]
-assignees: ["usuario-asignado"]
+assignees: []
 
 body:
   - type: markdown
@@ -48,6 +39,7 @@ body:
       label: "Descripción detallada"
       description: "Describe qué necesitas y cualquier información relevante."
       placeholder: "Ejemplo: Necesitamos calibrar un sensor de conductividad..."
+      render: markdown
 
   - type: checkboxes
     id: confirmacion
