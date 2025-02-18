@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Preguntas generales
+    url: https://github.com/sio-icm/solicitudes-sio/discussions
+    about: Si no es una solicitud formal, usa los Discussions.
