@@ -1,5 +1,1 @@
 blank_issues_enabled: false
-contact_links:
-  - name: Solicitar una prestación
-    url: https://github.com/sio-icm/solicitudes-sio/issues/new?template=solicitud_prestaciones.md
-    about: Si necesitas un servicio del SIO, usa esta plantilla.
