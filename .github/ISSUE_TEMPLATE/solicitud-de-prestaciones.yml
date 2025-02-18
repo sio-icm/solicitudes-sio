@@ -14,6 +14,37 @@ body:
         Por favor, completa el siguiente formulario para solicitar un servicio.
 
   - type: dropdown
+    id: tipo_prestacion
+    attributes:
+      label: "Prestación requerida"
+      options:
+        - "Uso de embarcaciones con patrón para campañas y mediciones"
+        - "Uso de tanques de experimentación en áreas controladas"
+        - "Asesoramiento en campañas oceanográficas"
+        - "Caracterización de agua marina con perfilador vertical"
+        - "Despliegue y mantenimiento de instrumentación oceanográfica"
+        - "Diseño, desarrollo e instalación de sensores, sistemas de observación y fondeos"
+        - "Ejecución de campañas oceanográficas"
+        - "Análisis de salinidad del agua"
+        - "Verificación de instrumentación"
+        - "Reparación de instrumentación oceanográfica"
+
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: "Descripción detallada de la necesidad"
+      description: "Describe qué necesitas y cualquier información relevante."
+      placeholder: "Ejemplo: Necesitamos desplegar un perfilador de CTD en la Bahía de Palma para una campaña de 2 semanas."
+      render: markdown
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 📌 Información del Solicitante
+        A continuación, proporciona tus datos personales y del proyecto asociado a la solicitud.
+
+  - type: dropdown
     id: pertenece_csic
     attributes:
       label: "¿Perteneces al CSIC?"
@@ -80,30 +111,6 @@ body:
     attributes:
       label: "Email del Responsable del proyecto"
       placeholder: "ejemplo@institucion.com"
-
-  - type: dropdown
-    id: tipo_prestacion
-    attributes:
-      label: "Prestación requerida"
-      options:
-        - "Uso de embarcaciones con patrón para campañas y mediciones"
-        - "Uso de tanques de experimentación en áreas controladas"
-        - "Asesoramiento en campañas oceanográficas"
-        - "Caracterización de agua marina con perfilador vertical"
-        - "Despliegue y mantenimiento de instrumentación oceanográfica"
-        - "Diseño, desarrollo e instalación de sensores, sistemas de observación y fondeos"
-        - "Ejecución de campañas oceanográficas"
-        - "Análisis de salinidad del agua"
-        - "Verificación de instrumentación"
-        - "Reparación de instrumentación oceanográfica"
-
-  - type: textarea
-    id: descripcion
-    attributes:
-      label: "Descripción detallada de la necesidad"
-      description: "Describe qué necesitas y cualquier información relevante."
-      placeholder: "Ejemplo: Necesitamos desplegar un perfilador de CTD en la Bahía de Palma para una campaña de 2 semanas."
-      render: markdown
 
   - type: input
     id: fecha_solicitud
