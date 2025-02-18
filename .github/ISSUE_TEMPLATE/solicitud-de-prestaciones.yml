@@ -5,45 +5,114 @@ labels: ["solicitud", "pendiente revisión"]
 assignees: []
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## 🚢 Solicitud de Prestación de Servicios del SIO
-        Por favor, completa el siguiente formulario para solicitar un servicio.
 
-  - type: input
-    id: nombre
-    attributes:
-      label: "Nombre del solicitante"
-      placeholder: "Ejemplo: Juan Pérez"
+type: markdown
+attributes:
+value: |
+## 🚢 Solicitud de Prestación de Servicios del SIO
+Por favor, completa el siguiente formulario para solicitar un servicio.
 
-  - type: input
-    id: email
-    attributes:
-      label: "Correo Electrónico"
-      placeholder: "ejemplo@empresa.com"
+type: dropdown
+id: pertenece_csic
+attributes:
+label: "¿Perteneces al CSIC?"
+options:
+- Sí
+- No
 
-  - type: dropdown
-    id: tipo_servicio
-    attributes:
-      label: "Tipo de servicio requerido"
-      options:
-        - Instrumentación Oceanográfica
-        - Procesamiento de Datos
-        - Asesoría Técnica
-        - Otro (especificar en la descripción)
+type: input
+id: nombre
+attributes:
+label: "Nombre y apellidos"
+placeholder: "Ejemplo: Juan Pérez"
 
-  - type: textarea
-    id: descripcion
-    attributes:
-      label: "Descripción detallada"
-      description: "Describe qué necesitas y cualquier información relevante."
-      placeholder: "Ejemplo: Necesitamos calibrar un sensor de conductividad..."
-      render: markdown
+type: input
+id: telefono
+attributes:
+label: "Teléfono"
+placeholder: "Ejemplo: +34 600 123 456"
 
-  - type: checkboxes
-    id: confirmacion
-    attributes:
-      label: "Confirmación"
-      options:
-        - label: "Confirmo que he revisado la documentación disponible antes de enviar esta solicitud."
+type: input
+id: email
+attributes:
+label: "Email"
+placeholder: "ejemplo@correo.com"
+
+type: input
+id: direccion
+attributes:
+label: "Dirección"
+placeholder: "Calle, número, CP, Ciudad"
+
+type: input
+id: centro
+attributes:
+label: "Centro"
+placeholder: "Ejemplo: ICM-CSIC"
+
+type: input
+id: departamento
+attributes:
+label: "Departamento/Grupo de investigación"
+placeholder: "Ejemplo: Oceanografía Física"
+
+type: input
+id: nombre_proyecto
+attributes:
+label: "Nombre del proyecto/acrónimo"
+placeholder: "Ejemplo: PROYECTO-MAR"
+
+type: input
+id: referencia_proyecto
+attributes:
+label: "Referencia del proyecto"
+placeholder: "Ejemplo: 2024-ICM-001"
+
+type: input
+id: responsable_proyecto
+attributes:
+label: "Responsable del proyecto"
+placeholder: "Ejemplo: Dra. María López"
+
+type: input
+id: email_responsable
+attributes:
+label: "Email del Responsable del proyecto"
+placeholder: "ejemplo@institucion.com"
+
+type: dropdown
+id: tipo_prestacion
+attributes:
+label: "Prestación requerida"
+options:
+- Uso de embarcaciones con patrón para campañas y mediciones
+- Uso de tanques de experimentación en áreas controladas
+- Asesoramiento en campañas oceanográficas
+- Caracterización de agua marina con perfilador vertical
+- Despliegue y mantenimiento de instrumentación oceanográfica
+- Diseño, desarrollo e instalación de sensores, sistemas de observación y fondeos
+- Ejecución de campañas oceanográficas
+- Análisis de salinidad del agua
+- Verificación de instrumentación
+- Reparación de instrumentación oceanográfica
+
+type: textarea
+id: descripcion
+attributes:
+label: "Descripción detallada de la necesidad"
+description: "Describe qué necesitas y cualquier información relevante."
+placeholder: "Ejemplo: Necesitamos desplegar un perfilador de CTD en la Bahía de Palma para una campaña de 2 semanas."
+render: markdown
+
+type: input
+id: fecha_solicitud
+attributes:
+label: "Fecha estimada del servicio"
+placeholder: "Ejemplo: 15/06/2024"
+
+type: checkboxes
+id: confirmacion
+attributes:
+label: "Confirmación"
+options:
+- label: "Confirmo que he revisado la documentación disponible antes de enviar esta solicitud."
